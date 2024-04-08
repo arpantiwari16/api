@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
+const cors = require('cors');
 const { MongoClient } = require('mongodb');
 
 // Connection URI
 const uri = 'mongodb+srv://arpantiwari150:arpan197@cluster1.xwrxxeb.mongodb.net/';
-
+app.use(cors());
 // Create a new MongoClient
 const client = new MongoClient(uri);
 
